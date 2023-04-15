@@ -39,7 +39,7 @@
 
 	if (isset($_SESSION['name']) && isset($_SESSION['gender']) && isset($_SESSION['birth_place']) && isset($_SESSION['birth_date']) && isset($_SESSION['religion']) && isset($_SESSION['home_address'])) {
 
-		echo '<h1>Registration Successful!</h1>';
+		echo '<h1>BIODATA ANDA TERSIMPAN</h1>';
 		echo '<p>Data anda berhasil tersimpan, berikut inputannya:</p>';
 
 
