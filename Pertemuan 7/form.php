@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registration Form</title>
+	<title>FORM BIODATA</title>
 	<style>
 		body{
 			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -49,13 +49,13 @@
 </head>
 <body>
 	<?php
-	// Start the session
+	
 	session_start();
 
-	// Check if the form has been submitted
+
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-		// Set session variables with form data
+	
 		$_SESSION['name'] = $_POST['name'];
 		$_SESSION['gender'] = $_POST['gender'];
 		$_SESSION['birth_place'] = $_POST['birth_place'];
@@ -63,10 +63,10 @@
 		$_SESSION['religion'] = $_POST['religion'];
 		$_SESSION['home_address'] = $_POST['home_address'];
 
-		// Set a cookie with the name value
+	
 		setcookie('name', $_POST['name'], time() + (86400 * 30), '/'); // expires in 30 days
 
-		// Redirect to the success page
+
 		header('Location: biodata.php');
 		exit();
 	}

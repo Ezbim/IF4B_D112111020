@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Registration Successful</title>
+	<title>BIODATA</title>
 	<style>
 		body {
 			font-size: 20px;
@@ -35,16 +35,14 @@
 </head>
 <body>
 	<?php
-	// Start the session
 	session_start();
 
-	// Check if session variables are set
 	if (isset($_SESSION['name']) && isset($_SESSION['gender']) && isset($_SESSION['birth_place']) && isset($_SESSION['birth_date']) && isset($_SESSION['religion']) && isset($_SESSION['home_address'])) {
-		// Display success message
+
 		echo '<h1>Registration Successful!</h1>';
 		echo '<p>Data anda berhasil tersimpan, berikut inputannya:</p>';
 
-		// Display form data in a table
+
 		echo '<table>';
 		echo '<tr><th>Keterangan</th><th>Data</th></tr>';
 		echo '<tr><td>Name:</td><td>' . $_SESSION['name'] . '</td></tr>';
@@ -55,11 +53,11 @@
 		echo '<tr><td>Home Address:</td><td>' . $_SESSION['home_address'] . '</td></tr>';
 		echo '</table>';
 
-		// Unset session variables
+	
 		session_unset();
 
 	} else {
-		// Display error message
+
 		echo '<h1>Error</h1>';
 		echo '<p>Maaf error restart.</p>';
 	}
@@ -68,7 +66,7 @@
 	<p><a href="form.php">Kembali</a></p>
 
 	<?php
-	// Check if the cookie is set
+
 	if (isset($_COOKIE['name'])) {
 		echo '<p>Data Anda Berhasil disimpan !</p>';
 	}
